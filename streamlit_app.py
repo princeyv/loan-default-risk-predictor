@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
+import streamlit as st
+import pandas as pd
 
 from sklearn.model_selection import train_test_split
 from sklearn.compose import ColumnTransformer
@@ -7,6 +10,9 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
+
+st.title("💳 Loan Default Risk Predictor")
+st.caption("Machine Learning model trained on the German Credit Dataset")
 
 st.set_page_config(page_title="Loan Default Risk Predictor", page_icon="💳")
 
@@ -80,7 +86,6 @@ def load_and_train_model():
 
 model = load_and_train_model()
 
-st.title("Loan Default Risk Predictor")
 st.write("Enter applicant details to estimate default risk.")
 
 checking_account_status = st.selectbox(
@@ -196,3 +201,20 @@ if st.button("Predict Risk"):
         st.error("High Risk of Default")
     else:
         st.success("Low Risk of Default")
+
+    if probability > 0.7:
+        st.warning("Applicant is very likely to default.")
+    elif probability > 0.4:
+        st.info("Applicant has moderate default risk.")
+    else:
+        st.success("Applicant appears financially safe.")
+        
+    st.markdown("---")
+st.subheader("Model Information")
+
+st.write("""
+Model: Logistic Regression  
+Dataset: German Credit Dataset (1000 applicants)  
+Features: 20 financial attributes  
+Evaluation ROC-AUC: ~0.80
+""")
