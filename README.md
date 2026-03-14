@@ -139,16 +139,17 @@ Probability of default
 - Streamlit Cloud
 
 ## Project Structure
+
 loan-default-risk-predictor
 │
 ├── assets
-│   └── loan-default-risk-predictor-project-streamlit-app.png
+│ └── loan-default-risk-predictor-project-streamlit-app.png
 │
 ├── data
-│   └── german.data
+│ └── german.data
 │
 ├── notebooks
-│   └── loan_default_prediction.ipynb
+│ └── loan_default_prediction.ipynb
 │
 ├── streamlit_app.py
 ├── requirements.txt
