@@ -105,7 +105,13 @@ purpose = st.selectbox(
     ["A40", "A41", "A42", "A43", "A44", "A45", "A46", "A48", "A49", "A410"]
 )
 
-credit_amount = st.number_input("Credit Amount", min_value=250, max_value=20000, value=5000, step=100)
+credit_amount = st.number_input(
+    "Credit Amount ($)",
+    min_value=250,
+    max_value=20000,
+    value=5000,
+    step=100
+)
 
 savings_account = st.selectbox(
     "Savings Account",
