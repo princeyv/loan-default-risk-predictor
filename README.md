@@ -140,33 +140,44 @@ Probability of default
 
 ## Project Structure
 
+```
 loan-default-risk-predictor
 │
 ├── assets
-│ └── loan-default-risk-predictor-project-streamlit-app.png
+│   └── loan-default-risk-predictor-project-streamlit-app.png
 │
 ├── data
-│ └── german.data
+│   └── german.data
 │
 ├── notebooks
-│ └── loan_default_prediction.ipynb
+│   └── loan_default_prediction.ipynb
 │
 ├── streamlit_app.py
 ├── requirements.txt
 ├── runtime.txt
 └── README.md
+```
 
 ## Installation (Run Locally)
 
-Clone the repository
+### Clone the repository
 
+```bash
 git clone https://github.com/princeyv/loan-default-risk-predictor.git
 cd loan-default-risk-predictor
+```
 
-- Install dependencies
-- pip install -r requirements.txt
-- Run the Streamlit app
-- streamlit run streamlit_app.py
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run the Streamlit application
+
+```bash
+streamlit run streamlit_app.py
+```
 
 Example Prediction Output
 
