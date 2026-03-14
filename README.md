@@ -89,9 +89,9 @@ The models were evaluated using:
 
 ## Final performance:
 
-| Metric |	Score |
-|------|--__--|
-|ROC-AUC	| ~0.80|
+| Metric | Score |
+|--------|-------|
+| ROC-AUC | ~0.80 |
 
 ## Application Features
 
